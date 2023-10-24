@@ -1,0 +1,149 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+html {
+  font-family: 'Source Code Pro', monospace;
+}
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px; /* Set base font-size */
+  background: #22c1c3;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #fdbb2d, #22c1c3);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #fdbb2d, #22c1c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: black;
+  
+
+  /* To ensure the gradient covers the entire viewport on all devices */
+  background-size: cover;
+  background-attachment: fixed; /* optional: this will make the gradient fixed when scrolling */
+  
+}
+
+ul {
+  list-style-type: none;
+  font-style: normal;
+  line-height: 1.5;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.brew {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 5% 0;
+}
+
+.brew > div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin: 10% 0;
+}
+
+button {
+  flex-basis: 45%;
+}
+.list { 
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 100%; /* Makes sure the list takes up full width on mobile */
+}
+
+.list address {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 90%; /* Reduces width to account for 1% margin on each side */
+  margin: 2% 5%; /* 2.5% margin on left and right */
+  padding: 1%; 
+  line-height: 1.5;
+  transition: transform 0.3s ease;
+}
+
+.list address:hover {
+  /* Step 2: Scale up on hover */
+  transform: scale(1.05); /* Adjust this value to your liking */
+  z-index: 1; /* To make sure the hovered block appears on top */
+}
+
+input {
+  background: none;         /* Remove default background */
+  border: none;             /* Remove all borders */
+  border-bottom: 2px solid #000;  /* Add bottom border */
+  outline: none;           /* Remove the blue outline when focused */
+  width: 100%;
+
+  /* Additional styles */
+  margin-bottom: 5%;
+  padding-bottom: 5px;     /* Add some space between text and the bottom border */
+  transition: border-color 0.3s ease;  /* Smooth transition for hover effects */
+}
+
+input:focus {
+  border-bottom-color: #F56217; /* Change border color when input is focused, optional */
+}
+
+button {
+  margin: 2.5% 0;
+  border-radius: 25px;
+  background-color: #fdbb2d;
+}
+button:hover {
+  background-color: #F56217; /* Change border color when input is focused, optional */
+}
+
+/******************************************
+/* RESPONSIVE & ADDITIONAL STYLES
+/*******************************************/
+
+/* Image responsiveness */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+
+  .list { 
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: auto; /* Reset width for larger screens */
+  }
+
+  .list address {
+    width: auto; /* Reset width for larger screens */
+    margin: 1%; 
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  body {
+    font-size: 20px;
+  }
+
+  .list { 
+    justify-content: space-around;
+  }
+}
+
+
