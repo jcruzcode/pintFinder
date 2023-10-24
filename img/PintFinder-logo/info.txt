@@ -1,0 +1,14 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: FARRAY
+font link: https://www.dropbox.com/s/qfeit6m8yssxaod/FARRAY.zip
+font author: Adrien Coquet
+font author site: http://www.adrien-coquet.com/
+
+
+icon designer: Benoît Champy
+icon designer link: /BC
+        
+{"bg":"#0B173D","icon":"#D1A103","font":"#D1A103","slogan":"#e5b517"}
+      
