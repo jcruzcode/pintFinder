@@ -49,7 +49,7 @@ ul {
 
 .brew > div {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column nowrap;
   justify-content: space-around;
   margin: 10% 0;
 }
